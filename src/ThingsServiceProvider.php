@@ -4,7 +4,6 @@ namespace Vmitchell85\Things;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Vmitchell85\Things\Commands\ThingsCommand;
 
 class ThingsServiceProvider extends PackageServiceProvider
 {
