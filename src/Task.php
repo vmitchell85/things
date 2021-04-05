@@ -54,9 +54,14 @@ class Task extends Model
         return $query->where('start', 0);
     }
 
-    public function scopeOpen($query)
+    public function scopeIncomplete($query)
     {
         return $query->where('status', 0);
+    }
+
+    public function scopeComplete($query)
+    {
+        return $query->where('status', 3);
     }
 
     public function scopeHasStartDate($query)
@@ -68,7 +73,7 @@ class Task extends Model
     {
         return $query
             ->notTrashed()
-            ->open()
+            ->incomplete()
             ->started()
             ->hasStartDate()
             ->orderBy('todayIndex')
