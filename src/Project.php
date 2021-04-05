@@ -2,9 +2,8 @@
 
 namespace Vmitchell85\Things;
 
-use Vmitchell85\Things\Task;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {

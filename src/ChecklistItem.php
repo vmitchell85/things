@@ -2,10 +2,7 @@
 
 namespace Vmitchell85\Things;
 
-use Vmitchell85\Things\Task;
-use Vmitchell85\Things\Project;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
 
 class ChecklistItem extends Model
 {
