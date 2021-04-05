@@ -2,6 +2,7 @@
 
 namespace Vmitchell85\Things;
 
+use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,5 +18,10 @@ class ThingsServiceProvider extends PackageServiceProvider
         $package
             ->name('things')
             ->hasConfigFile();
+    }
+
+    public function bootingPackage()
+    {
+        Config::set('database.connections.things', Config::get('things.database'));
     }
 }
